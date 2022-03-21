@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dev.lib - Gabriel Mureșan</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/second-lab-proj/src/img/fav-icon.png"
+    />
+    <link
+      rel="stylesheet"
+      href="/second-lab-proj/node_modules/bootstrap/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/second-lab-proj/src/custom.css" />
+    <script src="/second-lab-proj/node_modules/bootstrap/js/bootstrap.js"></script>
+    <script src="/second-lab-proj/src/script.js"></script>
+  </head>
+  <body>
+    <!-- NAV BAR CONTENT -->
+
+    <nav class="navbar navbar-expand-lg navbar-light default-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">dev.lib</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="nav navbar-nav me-auto">
+            <li class="nav-item" href="index.html">
+              <a
+                class="nav-link"
+                href="index.html"
+                data-bs-toggle="collapse"
+                data-bs-target=".navbar-collapse.show"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#"
+                data-bs-toggle="collapse"
+                data-bs-target=".navbar-collapse.show"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#"
+                data-bs-toggle="collapse"
+                data-bs-target=".navbar-collapse.show"
+                >Explore Assets</a
+              >
+            </li>
+          </ul>
+          <div class="nav navbar-nav navbar-right">
+            <!-- <button
+                class="btn btn-secondary m-1 btn-publish"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target=".navbar-collapse.show"
+                onclick="window.location='sign-up.html';"
+              >
+                Publish Asset ONLY IF LOGGED IN
+              </button> -->
+
+            <div class="dropstart">
+              <button
+                class="btn btn-primary m-1 dropdown-toggle"
+                type="button"
+                id="dropdownMenuProfile"
+                data-bs-toggle="dropdown"
+              >
+                @gabrielmuresan
+              </button>
+
+              <ul
+                class="dropdown-menu dropdown-menu-dark"
+                aria-labelledby="dropdownMenuProfile"
+              >
+                <li>
+                  <a class="dropdown-item" href="profile.html">Profile</a>
+                </li>
+                <li><a class="dropdown-item">Publish Asset</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="index.html">Sign Out</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <hr class="divider" />
+
+    <!-- PROFILE SECTION -->
+    <div class="container-fluid profile-section row">
+      <!-- MARGIN BY COL -->
+      <div class="col-2"></div>
+      <!-- LEFT SIDE OF PROFILE INCLUDING PROFILE PICTURE, NAMES, BIO, TAGS AND EDIT PROFILE BUTTON -->
+      <div class="col-3 left-nav-profile row">
+        <!-- FIRST SEGMENT OF THE LEFT SIDE CONTAINING PROFILE PICTURE AND NAMES -->
+        <div class="col-5">
+          <!-- PROFILE PICTURE -->
+          <img
+            width="150px"
+            class="rounded-circle"
+            src="/second-lab-proj/src/img/profile-picture.png"
+          />
+        </div>
+
+        <div class="col-7 user-details">
+          <!-- NAMES -->
+          <h1 class="display-4 full-name-profile">Gabriel Muresan</h1>
+          <h2 class="display-4 username-profile">@gabrielmuresan</h2>
+        </div>
+        <!-- DESCRIPTION SEGMENT WHICH OCCUPIES A WHOLE ROW, BUT IS ONLY 9 COLUMNS IN WIDTH -->
+        <div class="description-profile-container col-9">
+          <p class="description-profile">
+            Self-taught graphic designer, computer science student. Always
+            lookin' for more to learn.
+          </p>
+        </div>
+        <!-- TAGS SEGMENT -->
+        <div class="tags-profile-container col-12">
+          <!-- TAGS HEADER -->
+          <h4 class="dispaly-4 profile-headers tags-header">Tags</h4>
+          <!-- HERE ARE TAGS -->
+          <span class="badge rounded-pill user-tag user-tag-pro">PRO</span>
+          <span class="badge rounded-pill user-tag user-tag-2021-award"
+            >2021 BEST RATED ASSETS</span
+          >
+          <span class="badge rounded-pill user-tag user-tag-high-rating"
+            >HIGH RATED</span
+          >
+        </div>
+        <!-- EDIT PROFILE BUTTON -->
+        <button class="btn btn-primary m-1 edit-profile-button" type="button">
+          Edit profile
+        </button>
+      </div>
+      <!-- RIGHT SIDE AND MAIN SECTION OF PROFILE DISPLAYING ASSETS AND HISTORY -->
+      <div class="col-5 main-content-profile row">
+        <!-- HEADER -->
+        <div class="col-12 header-container-profile">
+          <h4
+            class="display-4 profile-headers profile-section-header top-assets"
+          >
+            Top Assets
+          </h4>
+        </div>
+        <!-- TOP ASSETS SECTION -->
+        <div class="no-content-text-container col-12">
+          <p class="no-content-text">
+            Uh Oh... There's nothing here.<br /><span>Explore </span> assets and
+            add them to favourites<br />for later.
+          </p>
+        </div>
+        <!-- HEADER -->
+        <div class="col-12 header-container-profile">
+          <h4
+            class="display-4 profile-headers profile-section-header top-assets"
+          >
+            Favourites
+          </h4>
+        </div>
+        <!-- NO CONTENT -->
+        <div class="no-content-text-container col-12">
+          <p class="no-content-text">
+            Uh Oh... There's nothing here.<br /><span>Explore </span> assets and
+            add them to favourites<br />for later.
+          </p>
+        </div>
+        <div class="col-12 header-container-profile">
+          <h4
+            class="display-4 profile-headers profile-section-header top-assets"
+          >
+            Activity History
+          </h4>
+        </div>
+      </div>
+      <!-- MARGIN BY COL -->
+      <div class="col-2"></div>
+    </div>
+  </body>
+</html>
