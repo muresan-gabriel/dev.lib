@@ -20,7 +20,7 @@
       <div class="container">
         <a class="navbar-brand" href="index.html">dev.lib</a>
         <button
-          class="navbar-toggler"
+          class="navbar-toggler shadow-none"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarText"
@@ -33,13 +33,13 @@
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link navbar-link-devlib" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link navbar-link-devlib" href="#">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="explore.html">Explore Assets</a>
+              <a class="nav-link navbar-link-devlib" href="explore.html">Explore Assets</a>
             </li>
           </ul>
           <form class="nav navbar-nav navbar-right">
@@ -53,7 +53,7 @@
               Publish Asset ONLY IF LOGGED IN
             </button> -->
             <button
-              class="btn m-1 btn-login"
+              class="btn m-1 btn-login shadow-none"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target=".navbar-collapse.show"
@@ -62,7 +62,7 @@
               Login
             </button>
             <button
-              class="btn btn-primary m-1 btn-sign-up"
+              class="btn btn-primary m-1 btn-sign-up shadow-none"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target=".navbar-collapse.show"
@@ -82,7 +82,7 @@
         <input
           type="email"
           placeholder="Email"
-          class="form-control"
+          class="form-control auth-inputs shadow-none"
           id="exampleInputEmail1"
           aria-describedby="emailHelp"
         />
@@ -91,12 +91,12 @@
         <input
           type="password"
           placeholder="Password"
-          class="form-control"
+          class="form-control auth-inputs shadow-none"
           id="exampleInputPassword1"
         />
       </div>
       <div class="form-group">
-      <button type="button" class="btn btn-primary form-control btn-sign-up-page" onclick="window.location='index-signed-in.html';">
+      <button type="button" class="btn btn-primary form-control auth-inputs btn-sign-up-page shadow-none" onclick="window.location='index-signed-in.html';">
         Sign In
       </button>
       <p class="no-alr-acc">Don't have an account? <a class="sign-in-up-a" href="sign-up.html">Sign Up</a></p>

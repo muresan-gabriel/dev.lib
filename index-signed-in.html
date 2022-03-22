@@ -29,7 +29,7 @@
       <div class="container">
         <a class="navbar-brand" href="index.html">dev.lib</a>
         <button
-          class="navbar-toggler"
+          class="navbar-toggler shadow-none"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarText"
@@ -42,13 +42,13 @@
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link navbar-link-devlib" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link navbar-link-devlib" href="#">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="explore.html">Explore Assets</a>
+              <a class="nav-link navbar-link-devlib" href="explore.html">Explore Assets</a>
             </li>
           </ul>
 
@@ -65,7 +65,7 @@
 
             <div class="dropstart">
               <button
-                class="btn btn-primary m-1 dropdown-toggle"
+                class="btn btn-primary m-1 dropdown-toggle shadow-none"
                 type="button"
                 id="dropdownMenuProfile"
                 data-bs-toggle="dropdown"
@@ -105,7 +105,7 @@
       </p>
       <div class="d-flex justify-content-center btn-cta-container">
         <button
-          class="btn btn-primary m-1 btn-cta"
+          class="btn btn-primary m-1 btn-cta shadow-none"
           type="button"
           onclick="window.location='sign-up.html';"
         >
@@ -221,6 +221,78 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="container">
+      <footer class="row row-cols-5 py-5 my-5 border-top">
+        <div class="col">
+          <a
+            href="/"
+            class="d-flex align-items-center mb-3 link-dark text-decoration-none"
+          >
+            <svg class="bi me-2" width="40" height="32">
+              <use xlink:href="#bootstrap"></use>
+            </svg>
+          </a>
+          <p class="text-muted">© 2022 - dev.lib</p>
+        </div>
+
+        <div class="col"></div>
+
+        <div class="col">
+          <h5 class="section-footer">Product</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Features</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Team</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Resources</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Roadmap</a>
+            </li>
+            >
+          </ul>
+        </div>
+
+        <div class="col">
+          <h5 class="section-footer">Support</h5>
+          <ul class="nav flex-column">
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Documentation</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Forum</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Status</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Contact</a>
+              </li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <h5 class="section-footer">Platform</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">About</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Blog</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Inclusion</a>
+            </li>
+          </ul>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
