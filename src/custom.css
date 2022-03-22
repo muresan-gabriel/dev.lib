@@ -511,3 +511,80 @@ marquee {
 .no-content-text {
   margin-top: 0;
 }
+
+@media only screen and (max-width: 1695px) {
+  .full-name-profile {
+    font-size: 1.2rem;
+  }
+  .username-profile {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 1625px) {
+  .user-details {
+    transform: translateX(10%);
+  }
+}
+
+@media only screen and (max-width: 1431px) {
+  .user-details {
+    transform: translateX(20%);
+  }
+}
+
+@media only screen and (max-width: 1283px) {
+  .user-details {
+    transform: translateX(30%);
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1129px) {
+  .user-details {
+    transform: translateX(45%);
+  }
+  .main-content-profile {
+    margin-left: 20%;
+  }
+  .no-content-text {
+    text-align: right;
+  }
+}
+
+@media only screen and (max-width: 1110px) {
+  .user-details {
+    transform: translateX(55%);
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .profile-section {
+    margin-right: 0;
+  }
+  .row {
+    --bs-gutter-x: 1.5rem;
+    margin-right: 0;
+  }
+  .container-fluid {
+    padding-right: 0;
+    margin-right: 0;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .user-details {
+    transform: translateX(0);
+    text-align: right;
+  }
+  .description-profile {
+    text-align: center;
+  }
+  .profile-headers {
+    margin-top: 25px;
+  }
+  .profile-picture-display {
+    width: 6rem;
+  }
+  .description-profile {
+    margin-top: 40px;
+  }
+}
