@@ -139,7 +139,7 @@ a:active,
   font-weight: 800;
 }
 
-p {
+.main-paragraph {
   color: #e4e6ea;
   text-align: center;
   margin-top: 3rem;
@@ -190,91 +190,6 @@ marquee {
   margin-left: 250px;
 }
 
-/* CARD SECTION THINGY */
-
-.card-section {
-  margin-top: 3rem;
-}
-
-.resources-desc {
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin-bottom: 3rem;
-  text-align: center;
-  color: #e4e6ea;
-}
-
-.card-title {
-  color: #1f1f1f;
-  font-size: 2rem;
-}
-
-.card-text {
-  text-align: left;
-  color: #686868;
-  margin-top: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.card-section {
-  padding: 0;
-}
-
-.card {
-  margin: 1rem;
-  border-radius: 1.5rem;
-  padding: 2rem;
-  padding-right: 10rem;
-  margin-bottom: 3rem;
-}
-
-/* MEDIA QUERIES CA NU STIU SA FAC NIMIC FARA ELE */
-
-@media only screen and (max-width: 1712px) {
-  .second-heading {
-    font-size: 2rem;
-  }
-}
-
-@media only screen and (max-width: 1500px) {
-  .card-section {
-    margin: 0;
-  }
-
-  .resources-desc {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin: 0;
-    text-align: center;
-    color: #e4e6ea;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-  }
-
-  .card-title {
-    color: #1f1f1f;
-    font-size: 2rem;
-  }
-
-  .card-text {
-    text-align: left;
-    color: #686868;
-    margin-bottom: 1.5rem;
-  }
-
-  .card-section {
-    padding: 0;
-  }
-
-  .card {
-    margin: 1rem;
-    border-radius: 1.5rem;
-    padding: 2rem;
-    padding-right: 10rem;
-    margin-bottom: 3rem;
-  }
-}
-
 @media only screen and (max-width: 1175px) {
   .form-control {
     height: 4rem;
@@ -288,6 +203,10 @@ marquee {
   .no-alr-acc {
     text-align: left;
   }
+}
+
+.no-alr-acc {
+  color: #e4e6ea;
 }
 
 @media only screen and (min-width: 1176px) {
@@ -323,48 +242,7 @@ marquee {
     margin-left: 2rem;
   }
 }
-
-@media only screen and (max-width: 625px) {
-  .card-section {
-    margin-top: 2rem;
-  }
-
-  .resources-desc {
-    font-size: 1.5rem;
-    font-weight: 800;
-    margin-bottom: 2rem;
-    text-align: center;
-    color: #e4e6ea;
-  }
-
-  .card-title {
-    color: #1f1f1f;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .card-text {
-    text-align: left;
-    color: #686868;
-    margin-bottom: 1.5rem;
-    font-size: 0.9rem;
-  }
-
-  .card-section {
-    padding: 0;
-  }
-
-  .card {
-    padding: 0;
-    border-radius: 1.5rem;
-    margin-right: 2rem;
-    margin-left: 2rem;
-    margin-bottom: 2rem;
-    padding-right: 3rem;
-    padding-left: 1rem;
-    padding: 2rem;
-  }
-}
+sssssssssssssssssssss
 
 /* PAGINILE SIGN IN SIGN UP */
 
@@ -450,6 +328,7 @@ marquee {
   text-align: left;
   font-weight: 500;
   margin-top: 20px;
+  color: #e4e6ea;
 }
 
 .profile-headers {
@@ -510,6 +389,7 @@ marquee {
 
 .no-content-text {
   margin-top: 0;
+  color: #e4e6ea;
 }
 
 @media only screen and (max-width: 1695px) {
@@ -587,4 +467,26 @@ marquee {
   .description-profile {
     margin-top: 40px;
   }
+}
+
+/* EXPLORE */
+
+.asset-name {
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+}
+
+.asset-post {
+  border-radius: 25px;
+}
+
+.asset-card-bg {
+  filter: saturate(0) brightness(0.3);
+  transition: 0.3s;
+  border-radius: 25px;
+}
+
+.asset-post:hover > .asset-card-bg {
+  filter: saturate(1);
 }
