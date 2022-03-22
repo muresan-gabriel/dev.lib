@@ -476,7 +476,7 @@ sssssssssssssssssssss
 /* EXPLORE */
 
 .explore-section {
-  margin-top: 5rem;
+  margin-top: 1rem;
 }
 
 .asset-name {
@@ -498,6 +498,29 @@ sssssssssssssssssssss
 .asset-post:hover > .asset-card-bg {
   filter: saturate(1);
 }
+
+/* FAVOURITE ICON - MUST FIX */
+
+.svg-heart {
+  transform: translateY(2px);
+}
+
+.favourite-icon {
+  background-color: #e4e6ea;
+  padding: 10px;
+  border-radius: 100%;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  display: none;
+  transition: 0.5s;
+}
+
+.asset-post:hover > .favourite-icon {
+  display: block;
+}
+
+/* FAVOURITE ICON - MUST FIX */
 
 .search-container {
   margin-top: 10px;
