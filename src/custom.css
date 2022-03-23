@@ -37,6 +37,7 @@ body {
 
 .navbar-light .navbar-brand {
   color: #e4e6ea;
+  transition: 0.5s;
 }
 
 .navbar-light:hover .navbar-brand:hover {
@@ -514,6 +515,8 @@ sssssssssssssssssssss
   top: 1rem;
   display: none;
   transition: 0.5s;
+  cursor: pointer;
+  z-index: 100;
 }
 
 .asset-post:hover > .favourite-icon {
@@ -647,5 +650,62 @@ br {
 @media only screen and (max-width: 1000px) {
   .copyright-footer {
     display: none;
+  }
+}
+
+.about-paragraph {
+  color: #e4e6ea;
+  font-weight: 500;
+  font-size: 36px;
+}
+
+.about-link {
+  text-decoration: none;
+  color: #aea8ff;
+  transition: 0.5s;
+}
+
+.about-link:hover {
+  color: #7671bd;
+}
+
+#aboutHeading {
+  font-size: 108px;
+}
+
+.company-about {
+  color: #d3ff5c;
+}
+
+.about-sections-headings {
+  color: #e4e6ea;
+}
+
+@media only screen and (min-width: 500px) {
+  .about-paragraph {
+    margin-top: 16rem;
+  }
+  .about-heading-container {
+    padding-right: 8rem;
+    padding-left: 8rem;
+  }
+  .about-paragraph {
+    padding-right: 2rem;
+    transform: translateX(-3rem);
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .about-paragraph-container {
+    width: 100vw;
+  }
+  .about-paragraph {
+    color: #e4e6ea;
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 2rem;
+  }
+  #aboutHeading {
+    font-size: 48px;
   }
 }

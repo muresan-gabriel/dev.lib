@@ -18,7 +18,6 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-    <script src="src/script.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -41,7 +40,7 @@
               <a class="nav-link navbar-link-devlib" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link navbar-link-devlib" href="#">About</a>
+              <a class="nav-link navbar-link-devlib" href="about.html">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link navbar-link-devlib" href="explore.html">Explore Assets</a>
@@ -214,14 +213,14 @@
       <!-- POST IN COLUMN -->
       <div class="col asset-column">
         <div class="card asset-post bg-dark text-white">
+          <!-- FAVOURITE ICON - MUST FIX -->
+          <!-- <div class="favourite-icon" id="favouriteIconContainer"><img id="favouriteIcon" width="32px" src="src/img/heart.svg" class="svg-heart"></div> -->
+          <!-- FAVOURITE ICON - MUST FIX -->
           <img
             src="src/img/saly-asset.png"
             class="card-img asset-card-bg"
             alt="Asset Image"
           />
-          <!-- FAVOURITE ICON - MUST FIX -->
-          <div class="favourite-icon"><img id="favouriteIcon" width="32px" src="src/img/heart.svg" href="#" class="svg-heart" onclick="changeImage()"></div>
-          <!-- FAVOURITE ICON - MUST FIX -->
           <div
             class="d-flex justify-content-center align-items-center card-img-overlay text-asset-container"
           > 
@@ -236,6 +235,9 @@
       <!-- POST IN COLUMN -->
       <div class="col asset-column">
         <div class="card asset-post bg-dark text-white">
+                    <!-- FAVOURITE ICON - MUST FIX -->
+                    <!-- <div class="favourite-icon" id="favouriteIconContainer"><img id="favouriteIcon" width="32px" src="src/img/heart.svg" class="svg-heart"></div> -->
+                    <!-- FAVOURITE ICON - MUST FIX -->
           <img
             src="src/img/saly-asset.png"
             class="card-img asset-card-bg"
@@ -495,5 +497,6 @@
         </div>
       </footer>
     </div>
+    <script src="src/script.js" defer></script>
   </body>
 </html>
