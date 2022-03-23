@@ -709,3 +709,13 @@ br {
     font-size: 48px;
   }
 }
+
+.footer-content {
+  padding-top: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-content {
+    padding-top: 3rem;
+  }
+}
