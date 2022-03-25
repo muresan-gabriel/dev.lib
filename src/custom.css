@@ -247,7 +247,6 @@ marquee {
     margin-left: 2rem;
   }
 }
-sssssssssssssssssssss
 
 /* PAGINILE SIGN IN SIGN UP */
 
@@ -748,4 +747,41 @@ br {
   .edit-profile-short {
     margin-bottom: 10px;
   }
+}
+
+@media only screen and (min-width: 992px) {
+  .asset-name-user-profile {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (min-width: 1130px) and (max-width: 1432px) {
+  .asset-name-user-profile {
+    font-size: 16px;
+  }
+  .main-content-profile {
+    transform: translateX(7rem);
+  }
+}
+@media only screen and (min-width: 1432px) {
+  .asset-name-user-profile {
+    font-size: 16px;
+  }
+}
+
+.display-user-tag {
+  color: #30d84c;
+  border-color: #30d84c;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.tags-label {
+  margin-bottom: 5px;
+}
+
+/* NAVBAR EXPLORATION */
+
+.navbar-exploration {
+  transition: 0.05s;
 }
