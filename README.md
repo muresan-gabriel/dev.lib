@@ -5,7 +5,7 @@
     <h3>dev.lib</h3>
   </a>
 
-  <h3 align="center">Portfolio</h3>
+  <h3 align="center">Open-source Assets</h3>
 
   <p align="center">
     Personal portfolio source code.
