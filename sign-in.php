@@ -1,3 +1,44 @@
+<?php
+session_start();
+
+include("connection.php");
+include("functions.php");
+
+if($_SERVER['REQUEST_METHOD'] == "POST")
+{
+  // something was posted
+  $email = $_POST['email'];
+  $password = $_POST['password'];
+
+  if(!empty($email) && !empty($password) && !is_numeric($email))
+  {
+    $query = "select * from users where email = '$email' limit 1";
+
+    $result = mysqli_query($con, $query);
+
+    if($result)
+    {
+      if($result && mysqli_num_rows($result) > 0)
+      {
+          $user_data = mysqli_fetch_assoc($result);
+          
+          if($user_data['password'] == $password)
+          {
+            $_SESSION['user_id'] = $user_data['user_id'];
+            header("Location: index-signed-in.html");
+            die;
+          }
+      }
+    }
+    echo "Please enter valid information.";
+  } 
+  else
+  {
+    echo "Please enter valid information.";
+  }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,7 +59,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
-        <a class="navbar-brand" href="index.html">dev.lib</a>
+        <a class="navbar-brand" href="index.php">dev.lib</a>
         <button
           class="navbar-toggler shadow-none"
           type="button"
@@ -33,13 +74,13 @@
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link navbar-link-devlib" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link navbar-link-devlib" aria-current="page" href="index.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link navbar-link-devlib" href="about.html">About</a>
+              <a class="nav-link navbar-link-devlib" href="about.php">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link navbar-link-devlib" href="explore.html">Explore Assets</a>
+              <a class="nav-link navbar-link-devlib" href="explore.php">Explore Assets</a>
             </li>
           </ul>
           <form class="nav navbar-nav navbar-right">
@@ -48,7 +89,7 @@
               type="button"
               data-bs-toggle="collapse"
               data-bs-target=".navbar-collapse.show"
-              onclick="window.location='sign-up.html';"
+              onclick="window.location='sign-up.php';"
             >
               Publish Asset ONLY IF LOGGED IN
             </button> -->
@@ -57,7 +98,7 @@
               type="button"
               data-bs-toggle="collapse"
               data-bs-target=".navbar-collapse.show"
-              onclick="window.location='sign-in.html';"
+              onclick="window.location='sign-in.php';"
             >
               Login
             </button>
@@ -66,7 +107,7 @@
               type="button"
               data-bs-toggle="collapse"
               data-bs-target=".navbar-collapse.show"
-              onclick="window.location='sign-up.html';"
+              onclick="window.location='sign-up.php';"
             >
               Sign Up
             </button>
@@ -77,30 +118,28 @@
     <div class="container-fluid justify-content-center">
     <h4 class="sign-in-text">Sign Into Your Account</h4>
 
-    <form class="login-form ">
-      <div class="form-group">
+    <form class="login-form" id="loginForm" method="post">
+      <div class="form-group" id="loginInputContaier">
         <input
           type="email"
+          name="email"
           placeholder="Email"
           class="form-control auth-inputs shadow-none"
           id="exampleInputEmail1"
           aria-describedby="emailHelp"
         />
-      </div>
-      <div class="form-group">
         <input
           type="password"
+          name="password"
           placeholder="Password"
           class="form-control auth-inputs shadow-none"
           id="exampleInputPassword1"
         />
-      </div>
-      <div class="form-group">
-      <button type="button" class="btn btn-primary form-control auth-inputs btn-sign-up-page shadow-none" onclick="window.location='index-signed-in.html';">
+        <button type="submit" class="btn btn-primary form-control auth-inputs btn-sign-up-page shadow-none" value="Login">
         Sign In
-      </button>
-      <p class="no-alr-acc">Don't have an account? <a class="sign-in-up-a" href="sign-up.html">Sign Up</a></p>
+        </button>
+        <p class="no-alr-acc">Don't have an account? <a class="sign-in-up-a" href="sign-up.php">Sign Up</a></p>
+      </div>
     </form>
-    </div>
   </body>
 </html>

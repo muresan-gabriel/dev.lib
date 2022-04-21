@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+include("connection.php");
+include("functions.php");
+
+$user_data = check_login($con);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,7 +31,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
-        <a class="navbar-brand" href="index.html">dev.lib</a>
+        <a class="navbar-brand" href="index.php">dev.lib</a>
         <button
           class="navbar-toggler shadow-none"
           type="button"
@@ -37,13 +46,13 @@
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link navbar-link-devlib" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link navbar-link-devlib" aria-current="page" href="index.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link navbar-link-devlib" href="about.html">About</a>
+              <a class="nav-link navbar-link-devlib" href="about.php">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link navbar-link-devlib" href="explore.html">Explore Assets</a>
+              <a class="nav-link navbar-link-devlib" href="explore.php">Explore Assets</a>
             </li>
           </ul>
 
@@ -53,7 +62,7 @@
             type="button"
             data-bs-toggle="collapse"
             data-bs-target=".navbar-collapse.show"
-            onclick="window.location='sign-up.html';"
+            onclick="window.location='sign-up.php';"
           >
             Publish Asset ONLY IF LOGGED IN
           </button> -->
@@ -73,11 +82,11 @@
                 aria-labelledby="dropdownMenuProfile"
               >
                 <li>
-                  <a class="dropdown-item" href="profile.html">Profile</a>
+                  <a class="dropdown-item" href="profile.php">Profile</a>
                 </li>
                 <li><a class="dropdown-item">Publish Asset</a></li>
                 <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="index.html">Sign Out</a></li>
+                <li><a class="dropdown-item" href="logout.php">Sign Out</a></li>
               </ul>
             </div>
           </div>
@@ -226,7 +235,7 @@
           > 
             <h5 class="card-title asset-name">Saly's Illustrations</h5>
             <!-- HREF CHANGES DEPENDING ON ASSET -->
-            <a href="index.html" class="stretched-link"></a>
+            <a href="index.php" class="stretched-link"></a>
           </div>
         </div>
       </div>
@@ -248,7 +257,7 @@
           >
             <h5 class="card-title asset-name">Saly's Illustrations</h5>
             <!-- HREF CHANGES DEPENDING ON ASSET -->
-            <a href="index.html" class="stretched-link"></a>
+            <a href="index.php" class="stretched-link"></a>
           </div>
         </div>
       </div>
@@ -267,7 +276,7 @@
           >
             <h5 class="card-title asset-name">Saly's Illustrations</h5>
             <!-- HREF CHANGES DEPENDING ON ASSET -->
-            <a href="index.html" class="stretched-link"></a>
+            <a href="index.php" class="stretched-link"></a>
           </div>
         </div>
       </div>
@@ -286,7 +295,7 @@
           >
             <h5 class="card-title asset-name">Saly's Illustrations</h5>
             <!-- HREF CHANGES DEPENDING ON ASSET -->
-            <a href="index.html" class="stretched-link"></a>
+            <a href="index.php" class="stretched-link"></a>
           </div>
         </div>
       </div>
@@ -305,7 +314,7 @@
           >
             <h5 class="card-title asset-name">Saly's Illustrations</h5>
             <!-- HREF CHANGES DEPENDING ON ASSET -->
-            <a href="index.html" class="stretched-link"></a>
+            <a href="index.php" class="stretched-link"></a>
           </div>
         </div>
       </div>
@@ -324,7 +333,7 @@
           >
             <h5 class="card-title asset-name">Saly's Illustrations</h5>
             <!-- HREF CHANGES DEPENDING ON ASSET -->
-            <a href="index.html" class="stretched-link"></a>
+            <a href="index.php" class="stretched-link"></a>
           </div>
         </div>
       </div>
@@ -343,7 +352,7 @@
           >
             <h5 class="card-title asset-name">Saly's Illustrations</h5>
             <!-- HREF CHANGES DEPENDING ON ASSET -->
-            <a href="index.html" class="stretched-link"></a>
+            <a href="index.php" class="stretched-link"></a>
           </div>
         </div>
       </div>
@@ -362,7 +371,7 @@
           >
             <h5 class="card-title asset-name">Saly's Illustrations</h5>
             <!-- HREF CHANGES DEPENDING ON ASSET -->
-            <a href="index.html" class="stretched-link"></a>
+            <a href="index.php" class="stretched-link"></a>
           </div>
         </div>
       </div>
@@ -381,7 +390,7 @@
           >
             <h5 class="card-title asset-name">Saly's Illustrations</h5>
             <!-- HREF CHANGES DEPENDING ON ASSET -->
-            <a href="index.html" class="stretched-link"></a>
+            <a href="index.php" class="stretched-link"></a>
           </div>
         </div>
       </div>
@@ -400,7 +409,7 @@
           >
             <h5 class="card-title asset-name">Saly's Illustrations</h5>
             <!-- HREF CHANGES DEPENDING ON ASSET -->
-            <a href="index.html" class="stretched-link"></a>
+            <a href="index.php" class="stretched-link"></a>
           </div>
         </div>
       </div>
@@ -419,7 +428,7 @@
           >
             <h5 class="card-title asset-name">Saly's Illustrations</h5>
             <!-- HREF CHANGES DEPENDING ON ASSET -->
-            <a href="index.html" class="stretched-link"></a>
+            <a href="index.php" class="stretched-link"></a>
           </div>
         </div>
       </div>
@@ -485,7 +494,7 @@
           <h5 class="section-footer">Platform</h5>
           <ul class="nav flex-column">
             <li class="nav-item mb-2">
-              <a href="about.html" class="nav-link p-0 text-muted">About</a>
+              <a href="about.php" class="nav-link p-0 text-muted">About</a>
             </li>
             <li class="nav-item mb-2">
               <a href="#" class="nav-link p-0 text-muted">Blog</a>

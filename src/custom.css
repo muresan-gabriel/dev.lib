@@ -285,6 +285,11 @@ marquee {
 
 .sign-in-up-a {
   color: #aea8ff;
+  transition: 1s;
+}
+
+.sign-in-up-a:hover {
+  color: #746dd1;
 }
 
 /* PROFILE PAGE */
@@ -706,6 +711,20 @@ br {
   }
   #aboutHeading {
     font-size: 48px;
+  }
+
+  .profile-section-header {
+    padding-top: 20px;
+  }
+
+  .dropstart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-item {
+    text-align: center;
   }
 }
 

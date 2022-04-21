@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+include("connection.php");
+include("functions.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -49,7 +56,7 @@
     <!-- NAV BAR CONTENT -->
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
-        <a class="navbar-brand" href="index.html">dev.lib</a>
+        <a class="navbar-brand" href="index.php">dev.lib</a>
         <button
           class="navbar-toggler shadow-none"
           type="button"
@@ -67,15 +74,15 @@
               <a
                 class="nav-link navbar-link-devlib"
                 aria-current="page"
-                href="index.html"
+                href="index.php"
                 >Home</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link navbar-link-devlib" href="about.html">About</a>
+              <a class="nav-link navbar-link-devlib" href="about.php">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link navbar-link-devlib" href="explore.html"
+              <a class="nav-link navbar-link-devlib" href="explore.php"
                 >Explore Assets</a
               >
             </li>
@@ -86,7 +93,7 @@
               type="button"
               data-bs-toggle="collapse"
               data-bs-target=".navbar-collapse.show"
-              onclick="window.location='sign-up.html';"
+              onclick="window.location='sign-up.php';"
             >
               Publish Asset ONLY IF LOGGED IN
             </button> -->
@@ -95,7 +102,7 @@
               type="button"
               data-bs-toggle="collapse"
               data-bs-target=".navbar-collapse.show"
-              onclick="window.location='sign-in.html';"
+              onclick="window.location='sign-in.php';"
             >
               Login
             </button>
@@ -104,7 +111,7 @@
               type="button"
               data-bs-toggle="collapse"
               data-bs-target=".navbar-collapse.show"
-              onclick="window.location='sign-up.html';"
+              onclick="window.location='sign-up.php';"
             >
               Sign Up
             </button>
@@ -130,7 +137,7 @@
         <button
           class="btn btn-primary m-1 btn-cta shadow-none"
           type="button"
-          onclick="window.location='sign-up.html';"
+          onclick="window.location='sign-up.php';"
         >
           Get Started
         </button>
@@ -247,7 +254,7 @@
           <h5 class="section-footer">Platform</h5>
           <ul class="nav flex-column">
             <li class="nav-item mb-2">
-              <a href="about.html" class="nav-link p-0 text-muted">About</a>
+              <a href="about.php" class="nav-link p-0 text-muted">About</a>
             </li>
             <li class="nav-item mb-2">
               <a href="#" class="nav-link p-0 text-muted">Blog</a>

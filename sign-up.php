@@ -1,3 +1,35 @@
+<?php
+session_start();
+
+  include("connection.php");
+  include("functions.php");
+
+  if($_SERVER['REQUEST_METHOD'] == "POST")
+  {
+    // something was posted
+    $full_name = $_POST['full_name'];
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    if(!empty($full_name) && !empty($full_name) && !empty($email) && !empty($password) && !is_numeric($email))
+    {
+      $user_id = random_num(20);
+      $query = "insert into users (user_id,full_name,username,email,password) values ('$user_id','$username','$full_name','$email','$password')";
+
+      mysqli_query($con, $query);
+
+      header("Location: sign-in.php");
+      die;
+    } 
+    else
+    {
+      echo "Please enter some valid information.";
+    }
+  }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,7 +50,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
-        <a class="navbar-brand" href="index.html">dev.lib</a>
+        <a class="navbar-brand" href="index.php">dev.lib</a>
         <button
           class="navbar-toggler shadow-none"
           type="button"
@@ -33,13 +65,13 @@
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link navbar-link-devlib" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link navbar-link-devlib" aria-current="page" href="index.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link navbar-link-devlib" href="about.html">About</a>
+              <a class="nav-link navbar-link-devlib" href="about.php">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link navbar-link-devlib" href="explore.html">Explore Assets</a>
+              <a class="nav-link navbar-link-devlib" href="explore.php">Explore Assets</a>
             </li>
           </ul>
           <form class="nav navbar-nav navbar-right">
@@ -48,7 +80,7 @@
               type="button"
               data-bs-toggle="collapse"
               data-bs-target=".navbar-collapse.show"
-              onclick="window.location='sign-up.html';"
+              onclick="window.location='sign-up.php';"
             >
               Publish Asset ONLY IF LOGGED IN
             </button> -->
@@ -57,7 +89,7 @@
               type="button"
               data-bs-toggle="collapse"
               data-bs-target=".navbar-collapse.show"
-              onclick="window.location='sign-in.html';"
+              onclick="window.location='sign-in.php';"
             >
               Login
             </button>
@@ -66,7 +98,7 @@
               type="button"
               data-bs-toggle="collapse"
               data-bs-target=".navbar-collapse.show"
-              onclick="window.location='sign-up.html';"
+              onclick="window.location='sign-up.php';"
             >
               Sign Up
             </button>
@@ -77,36 +109,44 @@
     <div class="container-fluid justify-content-center">
     <h4 class="sign-in-text">Create a new account</h4>
 
-    <form class="login-form ">
+    <form class="login-form " method="post">
       <div class="form-group">
         <input
           type="full-name"
+          name="full_name"
           placeholder="Full Name"
           class="form-control auth-inputs"
           id="exampleInputName1"
           aria-describedby="fullNameHelp"
         />
         <input
+          type="username"
+          name="username"
+          placeholder="Username"
+          class="form-control auth-inputs"
+          id="exampleInputName1"
+          aria-describedby="fullNameHelp"
+        />
+        <input
           type="email"
+          name="email"
           placeholder="Email"
           class="form-control auth-inputs shadow-none"
           id="exampleInputEmail1"
           aria-describedby="emailHelp"
         />
-      </div>
-      <div class="form-group">
         <input
           type="password"
+          name="password"
           placeholder="Password"
           class="form-control auth-inputs shadow-none"
           id="exampleInputPassword1"
         />
-      </div>
-      <div class="form-group">
-      <button type="button" class="btn btn-primary auth-inputs form-control btn-sign-up-page shadow-none">
+        <button type="submit" class="btn btn-primary auth-inputs form-control btn-sign-up-page shadow-none" value="Signup">
         Sign Up
-      </button>
-      <p class="no-alr-acc">Already have an account? <a class="sign-in-up-a" href="sign-in.html">Sign In</a></p>
+        </button>
+      </div>
+      <p class="no-alr-acc">Already have an account? <a class="sign-in-up-a" href="sign-in.php">Sign In</a></p>
     </form>
     </div>
   </body>
