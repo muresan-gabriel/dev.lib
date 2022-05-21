@@ -8,7 +8,7 @@
   <h3 align="center">Open-source Assets</h3>
 
   <p align="center">
-    Personal portfolio source code.
+    HTML / CSS only.
     <br />
     <a href="https://github.com/muresan-gabriel/dev.lib"><strong>Explore the docs »</strong></a>
     <br />
