@@ -73,11 +73,10 @@ Currently, the project isn't built using major technologies.
 - [x] Fix media queries and issues
 - [x] Create mobile version of the website
 - [x] Deploy live version of the website
-- [ ] Create a database which contains user details
-- [ ] Create a database which contains asset information
-- [ ] Create an API
-- [ ] Make registration, authentication and asset publishing / editing possible using PHP
-- [ ] Make user profile editing possible
+- [x] Create a database which contains user details
+- [x] Create a database which contains asset information
+- [x] Make registration, authentication and asset publishing / editing possible using PHP
+- [x] Make user profile editing possible
 - [ ] Implement donation functionalities (optional, might consider only offering the possibility to link an external donation platform such as https://www.buymeacoffee.com/)
 - [ ] Fix bugs and run tests
 - [ ] Finish the project and create a interactive and fun landing
